@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+
+# Job specific for the Docker
+export USE_NFSMOUNT=true

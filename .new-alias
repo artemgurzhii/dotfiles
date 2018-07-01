@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+
+from os import system
+
+alias = raw_input("Alias name: ")
+command = raw_input("Command: ")
+
+system('''echo "alias {}='{}'" >> ~/.aliases'''.format(alias, command))

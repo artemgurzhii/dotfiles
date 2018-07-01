@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# size of directory or file
+fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh;
+	else
+		local arg=-sh;
+	fi
+	du $arg .[^.]* ./*;
+}
+
+# Get current IP address
+ip() {
+	for interface in `ifconfig | grep ": flags" | cut -f1 -d":"`; do
+    ip=$(ifconfig $interface | grep "inet " | cut -f2 -d" ")
+    if [ ! -z $ip ]; then
+      echo "$interface : $ip"
+    fi
+	done
+}
+
+# Colorized output for the tail bash built-in
+ctail() {
+  tail "$@" | ccat
+}
+
+# Sync local fork with upstream master
+sync_fork() {
+  git fetch upstream
+  git merge upstream/master
+}
