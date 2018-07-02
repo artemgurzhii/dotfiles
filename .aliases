@@ -21,7 +21,6 @@ alias glcg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 
 ###### Changing directories
 # Parent dirs
-alias .='cd ../'
 alias ..="cd ../.."
 alias ...="cd ../../.."
 alias ....="cd ../../../.."
