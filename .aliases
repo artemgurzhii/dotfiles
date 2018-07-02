@@ -5,7 +5,7 @@ alias h='history'
 alias j='jobs'
 
 # GIT Aliases
-alias g="git"
+alias g='git'
 alias gf='git fetch'
 alias gd='git diff'
 alias gas='git add'
@@ -18,6 +18,10 @@ alias gcb='git checkout -b'
 alias gpo='git push origin'
 alias glo='git log --oneline'
 alias glcg="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# Docker aliases
+alias d='docker $*'
+alias d-c='docker-compose $*'
 
 ###### Changing directories
 # Parent dirs
