@@ -32,3 +32,9 @@ done;
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 	complete -o default -o nospace -F _git g;
 fi;
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_P    REFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM     into a shell session *as a function*
+
+export PATH="$HOME/.cargo/bin:$PATH"
